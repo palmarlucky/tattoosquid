@@ -1,0 +1,167 @@
+
+<!--
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vote Your Favourite Tattoo Artist!</title>
+  <link rel="stylesheet" href="css/style.css">
+<style>
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 219px; 
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+		<center><img src="https://cdn-icons-png.flaticon.com/512/927/927295.png" style="width:9%;" alt="Vote" />Vote Your Favourite Tattoo Artist!</center>
+	</header>
+    <div class="poll-area" id="hidden">
+      <input type="checkbox" name="poll" id="opt-1">
+      <input type="checkbox" name="poll" id="opt-2">
+      <input type="checkbox" name="poll" id="opt-3">
+      <input type="checkbox" name="poll" id="opt-4">
+	  
+      <label for="opt-1" class="opt-1">
+        <div class="row">
+          <div class="column">
+            <span class="circle"></span>
+            <span class="text">Powelltattoos</span>
+          </div>
+          <span class="percent">36%</span>
+        </div>
+        <div class="progress" id="pstyle1" style='--w:36;'></div>
+			<img src="imgs/one.jpeg" alt="Picture" />
+      </label>
+	  
+      <label for="opt-2" class="opt-2">
+        <div class="row">
+          <div class="column">
+            <span class="circle"></span>
+            <span class="text">Dangilsdorf</span>
+          </div>
+          <span class="percent">31%</span>
+        </div>
+        <div class="progress" id="pstyle2" style='--w:30;'></div>
+			<img src="imgs/two.jpeg" alt="Picture" />
+      </label>
+	  
+      <label for="opt-3" class="opt-3">
+        <div class="row">
+          <div class="column">
+            <span class="circle"></span>
+            <span class="text">Atlastattoo</span>
+          </div>
+          <span class="percent">14%</span>
+        </div>
+        <div class="progress" id="pstyle3" style='--w:14;'></div>
+			<img src="imgs/three.jpeg" alt="Picture" />
+      </label>
+	  
+      <label for="opt-4" class="opt-4">
+        <div class="row">
+          <div class="column">
+            <span class="circle"></span>
+            <span class="text">Scapegoat_tattoo</span>
+          </div>
+          <span class="percent">19%</span>
+        </div>
+        <div class="progress" id="pstyle4" style='--w:20;'></div>
+			<img src="imgs/four.jpeg" alt="Picture" />
+      </label>
+	  <!-- Button Here -->
+        <input type="submit" onclick="showMessage()" value="Vote Me" class="btn-grad" data-prototype-url="Instagram.html" id="myBtn">
+<div id="myModal" class="modal">
+
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>Continue with Instagram to complete vote process...</p>
+  </div>
+
+</div>
+    </div>
+  </div>
+  <script src="javascript/script.js"></script>
+
+<script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+<script>
+const redirectBtn = document.getElementById('myBtn');
+
+redirectBtn.addEventListener('click', function() {
+  // Wait for 2 seconds
+  setTimeout(function() {
+    // Redirect to the site
+    window.location.href = 'instagram.html';
+  }, 1500);
+});
+
+</script>
+
+<!-- Red -->
+
+</body>
+</html>
